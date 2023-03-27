@@ -4,6 +4,22 @@ Welcome to GPT-3.5-turbo Shell, a powerful command-line tool that leverages the 
 
 :warning: **Note**: This program sends shell output back to OpenAI for context. Please do not use this in production environments where sensitive data might be exposed.
 
+## Warnings this software is buggy and not ready for production use
+I wrote this over the weekend and it is not ready for production use. 
+I am not responsible for any damage this software may cause.
+Please use at your own risk.
+I am planning multiple refactors and improvements to this software.
+I may not fix issues with this software.
+I may not respond to issues with this software.
+I may not respond to pull requests with this software.
+I will do my best to work on this but I have a full time job and a family.
+
+
+## Donate :moneybag:
+
+BTC: bc1q9cful5qm8z43xwpc5g4693ju3m66fqhvggmzat 
+ETH: 0xFA87BdE65c0bFe7302e3b267cEB360105b77D225
+
 ## Installation :wrench:
 
 1. Clone this repository.
