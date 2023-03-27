@@ -1,0 +1,6 @@
+openai
+gnureadline
+markdown
+termcolor
+tiktoken
+pandas

@@ -1,0 +1,33 @@
+2023-03-27 08:33:09,071 - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: PUT_KEY_HERE. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-03-27 08:33:09,075 - ERROR - Failed to generate bash code.
+2023-03-27 08:33:09,075 - ERROR - Error: Incorrect API key provided: PUT_KEY_HERE. You can find your API key at https://platform.openai.com/account/api-keys.
+2023-03-27 08:33:09,075 - ERROR - Traceback: Traceback (most recent call last):
+  File "/Users/kod/code/gpt-3.5-turbo-shell/gptsh0.11.py", line 266, in process_input
+    parsed_response = generate_bash_code(user_input, messages, context, prev_command)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kod/code/gpt-3.5-turbo-shell/gptsh0.11.py", line 164, in generate_bash_code
+    response = openai.ChatCompletion.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+  File "/opt/homebrew/lib/python3.11/site-packages/openai/api_requestor.py", line 682, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: PUT_KEY_HERE. You can find your API key at https://platform.openai.com/account/api-keys.
+
+2023-03-27 08:33:09,076 - ERROR - An error occurred while processing the user input.
+2023-03-27 08:33:09,076 - ERROR - cannot unpack non-iterable NoneType object
+2023-03-27 08:33:09,076 - ERROR - Traceback (most recent call last):
+  File "/Users/kod/code/gpt-3.5-turbo-shell/gptsh0.11.py", line 342, in main
+    output, command = process_input(user_input, messages, context, prev_command=user_input)
+    ^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
